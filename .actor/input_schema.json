@@ -1,0 +1,26 @@
+{
+    "title": "Wedding Vendor Lead Finder Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "directoryUrls": {
+            "title": "Wedding Directory URLs",
+            "type": "array",
+            "description": "List of wedding directory category URLs (e.g., https://www.wedmegood.com/vendors/delhi-ncr/wedding-photographers/).",
+            "editor": "requestListSources",
+            "default": [{"url": "https://www.wedmegood.com/vendors/delhi-ncr/wedding-photographers/"}],
+            "prefill": [{"url": "https://www.wedmegood.com/vendors/delhi-ncr/wedding-photographers/"}]
+        },
+        "maxLeads": {
+            "title": "Max Leads to Extract",
+            "type": "integer",
+            "description": "Maximum number of vendor profiles to extract across all URLs.",
+            "editor": "number",
+            "minimum": 1,
+            "maximum": 50000,
+            "default": 500,
+            "prefill": 500
+        }
+    },
+    "required": ["directoryUrls"]
+}

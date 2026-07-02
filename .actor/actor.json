@@ -1,0 +1,24 @@
+{
+    "actorSpecification": 1,
+    "name": "wedding-vendor-scraper",
+    "title": "Wedding Vendor Lead Finder",
+    "description": "Extract highly targeted B2B lead profiles of wedding photographers, makeup artists, decorators, and venues from major wedding directories like WedMeGood.",
+    "version": "0.0",
+    "input": "./input_schema.json",
+    "dockerfile": "../Dockerfile",
+    "minMemoryMbytes": 256,
+    "maxMemoryMbytes": 1024,
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingEvents": [
+        {
+            "eventName": "apify-actor-start",
+            "pricePerEvent": 0.00005,
+            "description": "Charged once when Actor starts"
+        },
+        {
+            "eventName": "lead-extracted",
+            "pricePerEvent": 0.0015,
+            "description": "Charged per Wedding Vendor lead successfully extracted"
+        }
+    ]
+}
