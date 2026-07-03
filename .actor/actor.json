@@ -6,8 +6,8 @@
     "version": "0.0",
     "input": "./input_schema.json",
     "dockerfile": "../Dockerfile",
-    "minMemoryMbytes": 256,
-    "maxMemoryMbytes": 1024,
+    "minMemoryMbytes": 1024,
+    "maxMemoryMbytes": 4096,
     "pricingModel": "PAY_PER_EVENT",
     "pricingEvents": [
         {
@@ -20,5 +20,18 @@
             "pricePerEvent": 0.0015,
             "description": "Charged per Wedding Vendor lead successfully extracted"
         }
-    ]
+    ],
+    "isPublic": true,
+    "seoTitle": "Wedding Vendor Lead Finder | Apify Actor",
+    "seoDescription": "Extract highly targeted B2B lead profiles of wedding photographers, makeup artists, decorators, and venues from major wedding directories like WedMeGood.",
+    "categories": [
+        "BUSINESS",
+        "DATA_EXTRACTION",
+        "LEAD_GENERATION"
+    ],
+    "defaultRunOptions": {
+        "build": "latest",
+        "timeoutSecs": 1800,
+        "memoryMbytes": 4096
+    }
 }
